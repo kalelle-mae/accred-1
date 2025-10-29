@@ -1,0 +1,1 @@
+Client Website Landing Page for our Capstone System, created as part of our Web Development activity under Sir Donn. Built using HTML and CSS, this serves as the main menu interface for our project integration.
