@@ -1,0 +1,48 @@
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #d81e10, #f92e0e);
+  height: 60px;
+  width: 100%;
+  font-family: var(--site-font);
+  color: var(--header-color);
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  padding: 0 40px;
+  box-sizing: border-box;
+  box-shadow: 0 0px 10px rgba(180, 178, 180, 0.8);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: url("asset/logo/accreditrack.png") no-repeat center;
+  background-size: contain;
+}
+
+.logo-text {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+}

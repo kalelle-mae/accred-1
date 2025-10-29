@@ -1,0 +1,80 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  height: calc(100vh - 60px);
+  width: 100%;
+  background-color: #ffffff;
+  background-image: url(asset/background.png);
+  /* background-image: url(asset/annie.png), url(asset/background.png); */
+  /* background-size: 100vh; */
+  background-repeat: no-repeat;
+  /* background-position: 130px 20px, center; */
+  background-position: center;
+  margin-top: 60px;
+}
+
+.profile-img {
+  height: 670px;
+  width: 45%;
+  margin: 0px 60px 0px 100px;
+}
+
+p {
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+/* LOGIN BUTTON */
+.login-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login-btn {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  background: #ffffff;
+  color: #ff0404;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.login-btn:hover {
+  background: #d41212;
+}
+
+/*<===== MAIN NAV =====> */
+
+.main-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  font-size: 1.2rem;
+  font-family: "Poppins";
+  color: #ffffff;
+}
+
+.main-nav li:hover {
+  color: #0a0a0a;
+}
