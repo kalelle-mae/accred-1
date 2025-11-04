@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Create Account - AccrediTrack</title>
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body>
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="register-card">
+        <h1>CREATE ACCOUNT</h1>
+        <p class="subtitle">
+          Join AccrediTrack to manage your accreditation documents
+        </p>
+
+        <form action="login.html" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label>
+                First Name
+                <span class="required">*</span>
+              </label>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="firstname"
+                  placeholder="First name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>
+                Last Name
+                <span class="required">*</span>
+              </label>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="lastname"
+                  placeholder="Last name"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Email Address
+              <span class="required">*</span>
+            </label>
+            <div class="input-wrapper">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Role
+              <span class="required">*</span>
+            </label>
+            <div class="input-wrapper">
+              <select name="role" required>
+                <option value="">Select your role</option>
+                <option value="faculty">Faculty</option>
+                <option value="coordinator">Coordinator</option>
+                <option value="accreditor">Accreditor</option>
+                <option value="admin">Administrator</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>
+                Password
+                <span class="required">*</span>
+              </label>
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Create password"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>
+                Confirm Password
+                <span class="required">*</span>
+              </label>
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm_password"
+                  placeholder="Confirm password"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="terms-checkbox">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">
+              I agree to the
+              <a href="#">Terms and Conditions</a>
+              and
+              <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit" class="register-btn">Create Account</button>
+
+          <div class="already-account">
+            Already have an account?
+            <a href="login.html">Sign in</a>
+          </div>
+        </form>
+      </div>
+
+      <a href="index.html" target="_parent" class="back-home-btn">
+        ← Back to Home
+      </a>
+    </div>
+  </body>
+</html>

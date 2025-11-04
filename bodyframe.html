@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Body</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url("asset/pup_pillar.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.8);
+        margin: 40px auto;
+        max-width: 500px;
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        padding: 32px 24px;
+      }
+      .main h1 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+      }
+      .main p {
+        font-size: 1.1rem;
+        margin-bottom: 32px;
+      }
+      .main .btn-group {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+      }
+      .main .btn-group a {
+        text-decoration: none;
+        padding: 10px 28px;
+        border-radius: 6px;
+        background: #f7450a;
+        color: #fff;
+        font-weight: 500;
+        transition: background 0.2s;
+        border: none;
+        font-size: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+      .main .btn-group a:hover {
+        background: #f1410c;
+      }
+      footer {
+        width: 100%;
+        text-align: center;
+        padding: 18px 0;
+        background: rgba(255, 255, 255, 0.7);
+        font-size: 1rem;
+        color: #333;
+        margin-top: auto;
+        border-top: 1px solid #e0e0e0;
+      }
+    </style>
+  </head>
+  <body background="asset/background.png">
+    <section class="main">
+      <h1>Accreditation Management</h1>
+      <p>
+        Welcome to AccrediTrack, your platform for managing and tracking
+        accreditation processes efficiently.<br />
+        Access your dashboard, monitor progress, and stay compliant with ease.
+      </p>
+      <div class="btn-group">
+        <a href="login.html" targer="bodyframe">Login</a>
+        <a href="register.html" targer="bodyframe">Sign Up</a>
+      </div>
+    </section>
+    <footer>&copy; 2024 AccrediTrack. All rights reserved.</footer>
+  </body>
+</html>

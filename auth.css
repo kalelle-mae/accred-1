@@ -1,0 +1,288 @@
+/* Authentication Pages Styles */
+/* Note: Header styles are in header.css */
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+  background-image: url("asset/pup_pillar.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 40px 20px;
+}
+
+/* Form Card Styles */
+.login-card,
+.register-card {
+  background: white;
+  border-radius: 15px;
+  padding: 50px 60px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 450px;
+}
+
+.register-card {
+  max-width: 550px;
+}
+
+.login-card h1,
+.register-card h1 {
+  color: #d81e10;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.register-card h1 {
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+
+/* Form Styles */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.register-card .form-group {
+  margin-bottom: 20px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  display: block;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group label .required {
+  color: #d81e10;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  color: #999;
+  font-size: 18px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #d81e10;
+}
+
+.form-group input::placeholder {
+  color: #bbb;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: #999;
+  font-size: 18px;
+  user-select: none;
+}
+
+.toggle-password:hover {
+  color: #666;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  text-align: right;
+  margin-top: -15px;
+  margin-bottom: 25px;
+}
+
+.forgot-password a {
+  color: #666;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+  color: #d81e10;
+}
+
+/* Terms and Conditions */
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.terms-checkbox input[type="checkbox"] {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.terms-checkbox label {
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+.terms-checkbox a {
+  color: #d81e10;
+  text-decoration: none;
+}
+
+.terms-checkbox a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.signin-btn,
+.register-btn {
+  width: 100%;
+  padding: 15px;
+  background: #d81e10;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.signin-btn:hover,
+.register-btn:hover {
+  background: #b01808;
+}
+
+.register-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Account Links */
+.create-account,
+.already-account {
+  text-align: center;
+  margin-top: 25px;
+  color: #666;
+  font-size: 14px;
+}
+
+.create-account a,
+.already-account a {
+  color: #d81e10;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.create-account a:hover,
+.already-account a:hover {
+  text-decoration: underline;
+}
+
+/* Back to Home Button */
+.back-home-btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: #d81e10;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.back-home-btn:hover {
+  background: #b01808;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 0 20px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .login-card,
+  .register-card {
+    padding: 40px 30px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+}

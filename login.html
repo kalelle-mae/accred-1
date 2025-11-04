@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign In - AccrediTrack</title>
+    <link rel="stylesheet" href="auth.css" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="login-card">
+        <h1>SIGN IN</h1>
+
+        <form action="index.html" method="post">
+          <div class="form-group">
+            <label>
+              Email Address
+              <span class="required">*</span>
+            </label>
+            <div class="input-wrapper">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Password
+              <span class="required">*</span>
+            </label>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="forgot-password">
+            <a href="forgot-password.html"> Forgot your password? </a>
+          </div>
+
+          <button type="submit" class="signin-btn">Sign In</button>
+
+          <div class="create-account">
+            Don't have an account?
+            <a href="register.html">Create account</a>
+          </div>
+        </form>
+      </div>
+
+      <a href="index.html" target="_parent" class="back-home-btn">
+        ← Back to Home
+      </a>
+    </div>
+  </body>
+</html>
