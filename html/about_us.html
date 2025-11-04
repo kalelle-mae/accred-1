@@ -1,7 +1,197 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Body</title>
-  </head>
-  <body link="navy" vlink="navy" alink="#FDB813" bgcolor="pink"></body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | AccrediTrack</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Verdana", sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      line-height: 1.8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 40px;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 50px;
+      text-align: left;
+    }
+
+    .header-container img {
+      width: 130px;
+      height: auto;
+    }
+
+    .system-title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #630001;
+      line-height: 1.5;
+    }
+
+    .about-section {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .about-section p {
+      font-size: 17px;
+      text-align: justify;
+      margin-bottom: 25px;
+    }
+
+    .key-features {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .key-features p {
+      font-size: 17px;
+    }
+
+    /* --- INNER SIDE BORDER TABLE STYLE (WIDER CELLS) --- */
+    table.inner-sides {
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    table.inner-sides td {
+      width: 25%;
+      border-left: 2px solid #630001;
+      vertical-align: top;
+      text-align: center;
+      padding: 30px 40px;
+    }
+
+    table.inner-sides td:first-child {
+      border-left: none;
+    }
+
+    table.inner-sides td:last-child {
+      border-right: none;
+    }
+
+    table.inner-sides img {
+      width: 90px;
+      display: block;
+      margin: 0 auto 15px auto;
+    }
+
+    table.inner-sides p {
+      font-size: 16px;
+      text-align: justify;
+    }
+
+    table.inner-sides b {
+      color: #630001;
+    }
+
+    .my-team img {
+      width: 250px;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header-container">
+    <img src="/asset/logo/accreditrack-v2.png">
+    <p class="system-title">
+      AccrediTrack: Centralized Accreditation<br>Document Management System of PUP Taguig
+    </p>
+  </div>
+
+  <div class="about-section">
+    <p>
+      <b>AccrediTrack</b> is a <b>Centralized Accreditation Management System</b> engineered to transform how
+      educational institutions,
+      specifically beginning with PUP Taguig, achieve and maintain academic compliance.
+    </p>
+    <p>
+      We were founded on the principle of solving the widespread challenge of manual, fragmented accreditation
+      processes.
+      In the past, managing the vast volume of documents and tracking compliance progress meant facing
+      inefficiencies,
+      data inconsistencies, and the persistent risk of data loss. AccrediTrack was created to eliminate these
+      operational barriers.
+    </p>
+    <p>
+      <b>Our Solution</b><br><br>AccrediTrack provides a single, secure, and intelligent platform for all
+      accreditation activities.
+      We move the process beyond traditional file systems and into a modern, streamlined digital workflow.
+    </p>
+  </div>
+
+  <div class="key-features">
+    <br>
+    <p><b>Key features include:</b></p><br>
+    <table class="inner-sides">
+      <tr>
+        <td>
+          <img src="/asset/icons/1.png" alt="Centralized Repository">
+          <p><b>Centralized Repository:</b><br>
+            A secure, cloud-based hub for all evidence files,
+            structured logically by Areas, Parameters, and Criteria.</p>
+        </td>
+        <td>
+          <img src="/asset/icons/2.png" alt="Workflow & Task Management">
+          <p><b>Workflow & Task Management:</b><br>
+            Program Heads and Coordinators can assign requirements to
+            faculty, set deadlines, and track real-time submission progress.</p>
+        </td>
+        <td>
+          <img src="/asset/icons/3.png" alt="Compliance Monitoring">
+          <p><b>Compliance Monitoring:</b><br>
+            Dashboards offer immediate readiness scores, heatmaps,
+            and workload analytics, providing the clear, actionable visibility
+            needed for timely decision-making.</p>
+        </td>
+        <td>
+          <img src="/asset/icons/4.png" alt="Security & Audit">
+          <p><b>Security & Audit:</b><br>
+            Built with enterprise-level controls, including AES-256 Encryption,
+            OAuth 2.0, and comprehensive audit logs.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <br><br><br>
+  <p><b>Meet the Team<b></p>
+  <div class="my-team">
+    <table>
+      <tr>
+        <td>
+          <img src="/asset/members/annie.png">
+        </td>
+        <td>
+          <img src="/asset/members/zyra.png">
+        </td>
+        <td>
+          <img src="/asset/members/cute.png">
+        </td>
+        <td>
+          <img src="/asset/members/jakim.png">
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+
 </html>
