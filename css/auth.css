@@ -11,7 +11,7 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
-  background-image: url("../asset/bg/pup_pillar.png");
+  background-image: url("/asset/bg/pup_pillar.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
