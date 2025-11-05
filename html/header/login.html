@@ -17,50 +17,30 @@
     <div class="main-content">
       <div class="login-card">
         <h1>SIGN IN</h1>
+        <p class="subtitle">Select your role to continue</p>
 
-        <form action="/html/index.html" method="post">
-          <div class="form-group">
-            <label>
-              Email Address
-              <span class="required">*</span>
-            </label>
-            <div class="input-wrapper">
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email address"
-                required
-              />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>
-              Password
-              <span class="required">*</span>
-            </label>
-            <div class="input-wrapper">
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Enter your password"
-                required
-              />
-            </div>
-          </div>
-
-          <div class="forgot-password">
-            <a href="forgot-password.html"> Forgot your password? </a>
-          </div>
-
-          <button type="submit" class="signin-btn">Sign In</button>
-
-          <div class="create-account">
-            Don't have an account?
-            <a href="/html/header/register.html">Create account</a>
-          </div>
-        </form>
+        <div class="role-buttons">
+          <a 
+            href="/html/header/admin-login.html" 
+            class="role-card admin-card">
+            <div class="role-name">Administrator</div>
+          </a>
+          <a 
+            href="/html/header/faculty-login.html" 
+            class="role-card faculty-card">
+            <div class="role-name">Faculty</div>
+          </a>
+          <a 
+            href="/html/header/coordinator-login.html" 
+            class="role-card coordinator-card">
+            <div class="role-name">Coordinator</div>
+          </a>
+          <a 
+            href="/html/header/accreditor-login.html" 
+            class="role-card accreditor-card">
+            <div class="role-name">Accreditor</div>
+          </a>
+        </div>
       </div>
 
       <a href="/index.html" target="_parent" class="back-home-btn">
