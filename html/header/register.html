@@ -1,57 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Create Account - AccrediTrack</title>
+    <title>Registration - AccrediTrack</title>
     <link rel="stylesheet" href="/css/auth.css" />
   </head>
   <body>
+    <!-- Header Section -->
+    <div class="verify-header">
+      <h1 class="verify-title">Registration</h1>
+      <p class="verify-subtitle">
+        Enter your email to receive a verification code
+      </p>
+    </div>
+
     <!-- Main Content -->
-    <div class="main-content">
-      <div class="register-card">
-        <h1>CREATE ACCOUNT</h1>
-        <p class="subtitle">
-          Join AccrediTrack to manage your accreditation documents
-        </p>
+    <div class="verify-content">
+      <div class="verify-card">
+        <h2 class="verify-card-title">VERIFY YOUR EMAIL</h2>
 
-        <form action="/html/header/login.html" method="post">
-          <div class="form-row">
-            <div class="form-group">
-              <label>
-                First Name
-                <span class="required">*</span>
-              </label>
-              <div class="input-wrapper">
-                <input
-                  type="text"
-                  name="firstname"
-                  placeholder="First name"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>
-                Last Name
-                <span class="required">*</span>
-              </label>
-              <div class="input-wrapper">
-                <input
-                  type="text"
-                  name="lastname"
-                  placeholder="Last name"
-                  required
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>
+        <form>
+          <div class="verify-form-group">
+            <label class="verify-label">
               Email Address
               <span class="required">*</span>
             </label>
-            <div class="input-wrapper">
+            <div class="verify-input-wrapper">
               <input
                 type="email"
                 name="email"
@@ -61,76 +34,25 @@
             </div>
           </div>
 
-          <div class="form-group">
-            <label>
-              Role
-              <span class="required">*</span>
-            </label>
-            <div class="input-wrapper">
-              <select name="role" required>
-                <option value="">Select your role</option>
-                <option value="faculty">Faculty</option>
-                <option value="coordinator">Coordinator</option>
-                <option value="accreditor">Accreditor</option>
-                <option value="admin">Administrator</option>
-              </select>
-            </div>
-          </div>
+          <a 
+            href="/html/header/login.html" 
+            target="bodyframe" 
+            class="verify-btn">
+            Send OTP
+          </a>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label>
-                Password
-                <span class="required">*</span>
-              </label>
-              <div class="input-wrapper">
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Create password"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>
-                Confirm Password
-                <span class="required">*</span>
-              </label>
-              <div class="input-wrapper">
-                <input
-                  type="password"
-                  id="confirm-password"
-                  name="confirm_password"
-                  placeholder="Confirm password"
-                  required
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="terms-checkbox">
-            <input type="checkbox" id="terms" name="terms" required />
-            <label for="terms">
-              I agree to the
-              <a href="#">Terms and Conditions</a>
-              and
-              <a href="#">Privacy Policy</a>
-            </label>
-          </div>
-
-          <button type="submit" class="register-btn">Create Account</button>
-
-          <div class="already-account">
-            Already have an account?
-            <a href="/html/header/login.html">Sign in</a>
+          <div class="verify-links">
+            <p>
+              Already have an account?
+              <a href="/html/header/login.html" target="bodyframe">
+                Back to Login
+              </a>
+            </p>
           </div>
         </form>
       </div>
 
-      <a href="/index.html" target="_parent" class="back-home-btn">
+      <a href="/index.html" target="_top" class="verify-back-home">
         ← Back to Home
       </a>
     </div>
