@@ -24,41 +24,124 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-image: url("/asset/bg/pup_pillar.png");
+        background: linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.8),
+            rgba(118, 14, 7, 0.8)
+          ),
+          url("/asset/bg/pup_pillar.png");
+        background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         padding: 40px 0;
+        position: relative;
       }
       .main h1 {
-        font-size: 3.5rem;
-        margin-bottom: 16px;
-        color: #f3eeec;
+        font-size: 4.5rem;
+        margin-bottom: 24px;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+          0 0 40px rgba(223, 41, 28, 0.3);
+        font-weight: 800;
+        letter-spacing: 2px;
+        position: relative;
       }
+
+      .main h1::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(90deg, transparent, #df291c, transparent);
+        border-radius: 2px;
+      }
+
       .main p {
-        font-size: 1.1rem;
-        margin-bottom: 32px;
-        color: #f3eeec;
+        font-size: 1.25rem;
+        margin-bottom: 40px;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 800px;
+        line-height: 1.8;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(5px);
+        padding: 20px;
+        border-radius: 15px;
+        background: rgba(0, 0, 0, 0.1);
       }
       .main .btn-group {
         display: flex;
-        gap: 16px;
+        gap: 24px;
         justify-content: center;
+        animation: fadeIn 1s ease;
       }
       .main .btn-group a {
         text-decoration: none;
-        padding: 10px 28px;
-        border-radius: 6px;
-        background: #760e07;
-        color: #fff;
-        font-weight: 500;
-        transition: background 0.2s;
-        border: none;
-        font-size: 1rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        padding: 15px 40px;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
       }
-      .main .btn-group a:hover {
-        background: #df291c;
+      .main .btn-group a:first-child {
+        background: linear-gradient(45deg, #760e07, #df291c);
+        color: #fff;
+        border: none;
+      }
+      .main .btn-group a:last-child {
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(5px);
+      }
+      .main .btn-group a:first-child:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 20px 30px rgba(223, 41, 28, 0.3);
+      }
+      .main .btn-group a:last-child:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+      }
+      .main .btn-group a:active {
+        transform: translateY(0) scale(0.95);
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
       /* ---LEVELS SECTION-----*/
 
@@ -287,13 +370,15 @@
     <section class="main">
       <h1>PUP Taguig AccrediTrack</h1>
       <p>
-        Welcome to AccrediTrack, your platform for managing and tracking
-        accreditation processes efficiently.<br />
-        Access your dashboard, monitor progress, and stay compliant with ease.
+        Welcome to the next generation of accreditation management at PUP
+        Taguig. AccrediTrack streamlines your accreditation journey with
+        powerful tools and intuitive interfaces. Join us in elevating
+        educational excellence through efficient, transparent, and comprehensive
+        tracking.
       </p>
       <div class="btn-group">
-        <a href="/html/header/login.html" target="bodyframe">Login</a>
-        <a href="/html/header/register.html" target="bodyframe">Sign Up</a>
+        <a href="/html/header/login.html" target="bodyframe">Get Started</a>
+        <a href="/html/header/register.html" target="bodyframe">Learn More</a>
       </div>
     </section>
 
