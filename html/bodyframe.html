@@ -152,6 +152,17 @@
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
       }
 
+      /* Add styles for card links */
+      .card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      .card {
+        cursor: pointer;
+      }
+
       /* Footer Section */
       .footer {
         width: 100%;
@@ -260,48 +271,56 @@
     <section class="levels">
       <h2>Levels in Accreditation</h2>
       <div class="level-images">
-        <div class="card">
-          <div class="card-image">
-            <img src="/asset/levels/level_1.png" alt="Level 1" />
+        <a href="/html/header/login.html" target="bodyframe" class="card-link">
+          <div class="card">
+            <div class="card-image">
+              <img src="/asset/levels/level_1.png" alt="Level 1" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Level I</h3>
+              <p class="card-description">Initial compliance – Areas 1–10</p>
+            </div>
           </div>
-          <div class="card-content">
-            <h3 class="card-title">Level I</h3>
-            <p class="card-description">Initial compliance – Areas 1–10</p>
+        </a>
+        <a href="/html/header/login.html" target="bodyframe" class="card-link">
+          <div class="card">
+            <div class="card-image">
+              <img src="/asset/levels/level_2.png" alt="Level 2" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Level II</h3>
+              <p class="card-description">
+                Continuous improvement & quality implementation
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img src="/asset/levels/level_2.png" alt="Level 2" />
+        </a>
+        <a href="/html/header/login.html" target="bodyframe" class="card-link">
+          <div class="card">
+            <div class="card-image">
+              <img src="/asset/levels/level_3.png" alt="Level 3" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Level III</h3>
+              <p class="card-description">
+                Mature systems, research, and extension excellence
+              </p>
+            </div>
           </div>
-          <div class="card-content">
-            <h3 class="card-title">Level II</h3>
-            <p class="card-description">
-              Continuous improvement & quality implementation
-            </p>
+        </a>
+        <a href="/html/header/login.html" target="bodyframe" class="card-link">
+          <div class="card">
+            <div class="card-image">
+              <img src="/asset/levels/level_4.png" alt="Level 4" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Level IV</h3>
+              <p class="card-description">
+                Sustained excellence and international recognition
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img src="/asset/levels/level_3.png" alt="Level 3" />
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">Level III</h3>
-            <p class="card-description">
-              Mature systems, research, and extension excellence
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img src="/asset/levels/level_4.png" alt="Level 4" />
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">Level IV</h3>
-            <p class="card-description">
-              Sustained excellence and international recognition
-            </p>
-          </div>
-        </div>
+        </a>
       </div>
     </section>
     <footer class="footer">
