@@ -60,7 +60,7 @@
       .main .btn-group a:hover {
         background: #df291c;
       }
-      /* ---LEVELS-----*/
+      /* ---LEVELS SECTION-----*/
 
       .levels {
         height: 80vh;
@@ -70,102 +70,86 @@
         background: #ffffff;
       }
 
+      .levels h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #760e07;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+
       .level-images {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 50px;
         margin-bottom: 10px;
-        margin-top: 80px;
+        margin-top: 40px;
       }
 
+      /* CARD STYLES  */
       .card {
-        width: 250px;
-        height: 280px;
+        width: 280px;
+        height: auto;
         position: relative;
-        transition: 0.2s ease;
-        color: #0a0a0a;
-        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
         border-radius: 16px;
-        overflow: hidden; /* ensures overlay stays inside */
-        box-shadow: 8px 10px 20px rgba(91, 14, 91, 0.35); /* bottom left, malinaw */
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       }
 
-      .card img {
+      .card-image {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 16px;
-        display: block;
       }
 
-      .card span {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
-        padding: 6px 16px;
-        font-weight: bold;
-        color: #ebdfe9;
-        font-family: "Dancing Script";
-        font-size: 1.1rem;
-      }
-
-      .card::before {
+      .card-image::before {
         content: "";
-        margin-bottom: 5px;
         position: absolute;
-        border-radius: 16px;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgb(56, 1, 1); /* changed to red */
-        pointer-events: none; /* allows clicks to pass through */
+        background: rgba(176, 6, 6, 0.486);
+        transition: opacity 0.3s ease;
+      }
+
+      .card:hover .card-image::before {
+        opacity: 0;
+      }
+
+      .card-content {
+        padding: 20px;
+        background: #fff;
+      }
+
+      .card-title {
+        font-size: 1.4rem;
+        color: #760e07;
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+
+      .card-description {
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.4;
       }
 
       .card:hover {
-        transform: scale(1.05);
-        opacity: 1;
-        cursor: pointer;
-      }
-
-      .card span {
-        top: 40%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-        padding: 6px 16px;
-        font-weight: bold;
-        color: #ebdfe9;
-        font-family: "Dancing Script";
-        font-size: 1.1rem;
-      }
-
-      .card:hover span {
-        opacity: 0;
-        transition: opacity 0.2s;
-      }
-
-      .card:before {
-        content: "";
-        height: 100%;
-        width: 100%;
-        border-radius: 16px;
-        background: rgba(176, 6, 6, 0.486); /* changed to red */
-        z-index: 1;
-        pointer-events: none; /* allows clicks to pass through */
-      }
-
-      .card:hover {
-        transform: scale(1.05);
-        opacity: 10;
-        cursor: pointer;
-      }
-
-      .card:hover::before {
-        opacity: 0;
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
       }
 
       /* Footer Section */
@@ -177,6 +161,52 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      /* Accreditation Info Section */
+      .accreditation-info {
+        width: 100%;
+        min-height: 60vh;
+        background: #f5f5f5;
+        padding: 60px 20px;
+      }
+
+      .accreditation-info h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #760e07;
+        margin-bottom: 40px;
+      }
+
+      .info-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .info-text {
+        flex: 1;
+        text-align: justify;
+        line-height: 1.6;
+      }
+
+      .info-text p {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .info-image {
+        flex: 1;
+        max-width: 400px;
+      }
+
+      .info-image img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
     </style>
   </head>
@@ -193,23 +223,84 @@
         <a href="/html/header/register.html" target="bodyframe">Sign Up</a>
       </div>
     </section>
+
+    <section class="accreditation-info">
+      <h2>About Accreditation</h2>
+      <div class="info-content">
+        <div class="info-text">
+          <p>
+            Accreditation is a vital process that ensures educational
+            institutions meet and maintain high standards of quality education.
+            It involves a comprehensive evaluation of an institution's
+            facilities, faculty, curriculum, and overall educational
+            effectiveness.
+          </p>
+          <p>
+            The accreditation process at PUP Taguig follows a systematic
+            approach through different levels, each representing increased
+            excellence and quality in education delivery. This process helps us
+            continuously improve our academic programs and institutional
+            effectiveness.
+          </p>
+          <p>
+            Through AccrediTrack, we streamline the documentation and monitoring
+            of our accreditation journey, ensuring transparency and efficiency
+            in the process.
+          </p>
+        </div>
+        <div class="info-image">
+          <img
+            src="/asset/info/accreditation-process.png"
+            alt="Accreditation Process"
+          />
+        </div>
+      </div>
+    </section>
+
     <section class="levels">
+      <h2>Levels in Accreditation</h2>
       <div class="level-images">
         <div class="card">
-          <span>Level I</span>
-          <img src="/asset/levels/level_1.png" alt="Level 1" />
+          <div class="card-image">
+            <img src="/asset/levels/level_1.png" alt="Level 1" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Level I</h3>
+            <p class="card-description">Initial compliance – Areas 1–10</p>
+          </div>
         </div>
         <div class="card">
-          <span>Level II</span>
-          <img src="/asset/levels/level_2.png" alt="Level 2" />
+          <div class="card-image">
+            <img src="/asset/levels/level_2.png" alt="Level 2" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Level II</h3>
+            <p class="card-description">
+              Continuous improvement & quality implementation
+            </p>
+          </div>
         </div>
         <div class="card">
-          <span>Level III</span>
-          <img src="/asset/levels/level_3.png" alt="Level 3" />
+          <div class="card-image">
+            <img src="/asset/levels/level_3.png" alt="Level 3" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Level III</h3>
+            <p class="card-description">
+              Mature systems, research, and extension excellence
+            </p>
+          </div>
         </div>
         <div class="card">
-          <span>Level IV</span>
-          <img src="/asset/levels/level_4.png" alt="Level 4" />
+          <div class="card-image">
+            <img src="/asset/levels/level_4.png" alt="Level 4" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Level IV</h3>
+            <p class="card-description">
+              Sustained excellence and international recognition
+            </p>
+          </div>
         </div>
       </div>
     </section>
