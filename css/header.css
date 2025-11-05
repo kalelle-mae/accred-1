@@ -3,7 +3,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, #b10f04, #b10f04);
+  background: linear-gradient(to right, #760e07, #760e07);
   height: 60px;
   width: 100%;
   font-family: var(--site-font);
@@ -84,9 +84,10 @@ header a {
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
-  transition: background 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .login-btn:hover {
-  background: #d41212;
+  background: #df291c;
+  color: #ffffff;
 }
