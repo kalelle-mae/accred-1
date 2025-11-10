@@ -124,6 +124,90 @@
             color: #555;
             text-align: center;
         }
+
+        .immediate-tasks {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .immediate-tasks h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .task-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            padding: 18px 20px;
+            margin-bottom: 12px;
+            border-left: 6px solid transparent;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .task-title {
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .status {
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .status.pending {
+            color: #8a6d00;
+            background: #fff8e1;
+        }
+
+        .status.revision {
+            color: #b00020;
+            background: #fec7c7;
+        }
+
+        .task-info {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .deadline {
+            font-size: 13px;
+            color: #555;
+            margin-top: 4px;
+        }
+
+        /* Border colors by type */
+        .faculty {
+            background: #fff5f5;
+        }
+
+        .curriculum {
+            background: #fff5f5;
+        }
+
+        .extension {
+            background: #fff5f5;
+        }
+
+        .b {
+            color: #b00020;
+        }
     </style>
 </head>
 
@@ -158,6 +242,39 @@
             <div class="progress-percentage">25%</div>
         </div>
         <div class="progress-label">of tasks approved or pending review.</div>
+    </div>
+
+    <div class="immediate-tasks">
+        <div class="card immediate-tasks">
+            <h3>Immediate Tasks (3 Critical)</h3>
+
+            <div class="task-card faculty">
+                <div class="task-header">
+                    <div class="task-title">Upload CV / Resume (updated)</div>
+                    <div class="status pending">⏱ Pending</div>
+                </div>
+                <div class="task-info">Area: <b>Faculty</b> | Criteria: A.1.1</div>
+                <div class="deadline">Deadline: 2025-11-30</div>
+            </div>
+
+            <div class="task-card curriculum">
+                <div class="task-header">
+                    <div class="task-title">Submit Course Syllabus (AY 24-25, 2nd Sem)</div>
+                    <div class="status revision">⚠ Needs Revision</div>
+                </div>
+                <div class="task-info">Area: <b>Curriculum</b> | Criteria: B.2.1</div>
+                <div class="deadline">Deadline: 2025-12-05</div>
+            </div>
+
+            <div class="task-card extension">
+                <div class="task-header">
+                    <div class="task-title">Documentation of Extension Project</div>
+                    <div class="status pending">⏱ Pending</div>
+                </div>
+                <div class="task-info">Area: <b>Extension</b> | Criteria: D.1.4</div>
+                <div class="deadline">Deadline: 2025-12-15</div>
+            </div>
+        </div>
     </div>
 
 </body>
