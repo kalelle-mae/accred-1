@@ -165,9 +165,111 @@
       margin-top: 60px;
     }
 
+    .my-team p {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .my-team table {
+      margin: 0 auto;
+      border-spacing: 30px;
+    }
+
     .my-team img {
-      width: 250px;
-      height: auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 2%;
+      border: 4px solid #760e07;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .member {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    /* Image inside the circle */
+    .member img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 2%;
+      transition: transform 0.4s ease, filter 0.4s ease;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(to top, rgba(118, 14, 7, 0.95), rgba(118, 14, 7, 0.7));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 1;
+    }
+
+    /* Overlay text */
+    .overlay span {
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .member::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 4px solid #760e07;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* Hover effects */
+    .member:hover img {
+      transform: scale(1.1);
+      filter: brightness(0.7);
+    }
+
+    .member:hover .overlay {
+      opacity: 1;
+    }
+
+    .member:hover .overlay span {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .member-wrapper {
+      text-align: center;
+    }
+
+    .member-wrapper .role {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #333;
+      font-weight: 600;
+      font-family: "Verdana", sans-serif;
+    }
+
+    .member-wrapper:hover .role {
+      color: #760e07;
+      transition: color 0.3s ease;
     }
   </style>
 </head>
@@ -246,16 +348,40 @@
     <table style="margin: 0 auto;">
       <tr>
         <td>
-          <img src="/asset/members/annie.png">
+          <div class="member-wrapper">
+            <div class="member">
+              <img src="/asset/members/annie.png" alt="Annie">
+              <div class="overlay"><span>Annie Rose Raquem</span></div>
+            </div>
+            <p class="role">Project Manager /<br>Lead Developer</p>
+          </div>
         </td>
         <td>
-          <img src="/asset/members/zyra.png">
+          <div class="member-wrapper">
+            <div class="member">
+              <img src="/asset/members/zyra.png" alt="Zyra">
+              <div class="overlay"><span>Zyra Joy Niones</span></div>
+            </div>
+            <p class="role">UI/UX Designer</p>
+          </div>
         </td>
         <td>
-          <img src="/asset/members/cute.png">
+          <div class="member-wrapper">
+            <div class="member">
+              <img src="/asset/members/cute.png" alt="Cute">
+              <div class="overlay"><span>Kalelle Mae Victorio</span></div>
+            </div>
+            <p class="role">Frontend Developer /<br>Quality Assurance</p>
+          </div>
         </td>
         <td>
-          <img src="/asset/members/jakim.png">
+          <div class="member-wrapper">
+            <div class="member">
+              <img src="/asset/members/jakim.png" alt="Jakim">
+              <div class="overlay"><span>Jakim Lopez</span></div>
+            </div>
+            <p class="role">Backend Developer /<br>Documentation</p>
+          </div>
         </td>
       </tr>
     </table>
