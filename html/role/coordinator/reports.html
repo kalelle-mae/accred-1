@@ -1,12 +1,238 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
+  <title>Reports Center</title>
+  <style>
+    /* ===== General Reset ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
 
-    </style>
+    body {
+      background-color: #f6f6f9;
+      color: #333;
+      padding: 40px;
+    }
+
+    /* ===== Header Section ===== */
+    .page-header {
+      margin-bottom: 20px;
+    }
+
+    .page-header h1 {
+      font-size: 1.8rem;
+      color: #b71c1c;
+      font-weight: 700;
+    }
+
+    .page-header p {
+      font-size: 1rem;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    .page-header span {
+      font-weight: 600;
+      color: #b71c1c;
+    }
+
+    .underline {
+      width: 60px;
+      height: 3px;
+      background-color: #b71c1c;
+      margin-top: 10px;
+      border-radius: 2px;
+    }
+
+    /* ===== Card Container ===== */
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      padding: 25px 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      color: #1a1a1a;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card h2::before {
+      content: "📑";
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 8px 0 20px;
+    }
+
+    /* ===== Report List ===== */
+    .report-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .report-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 15px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .report-item:hover {
+      background-color: #fff7f7;
+      transform: scale(1.01);
+      border-color: #f3c2c2;
+    }
+
+    .report-info h3 {
+      font-size: 1rem;
+      color: #222;
+      margin-bottom: 5px;
+    }
+
+    .report-info p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .report-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .file-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #b71c1c;
+      background-color: #fdeaea;
+      padding: 5px 10px;
+      border-radius: 6px;
+    }
+
+    .export-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #b71c1c;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .export-btn:hover {
+      background-color: #8b0000;
+      transform: scale(1.05);
+    }
+
+    .export-btn::before {
+      content: "⬇️";
+      font-size: 0.9rem;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .page-header h1 {
+        font-size: 1.4rem;
+      }
+
+      .card h2 {
+        font-size: 1.1rem;
+      }
+
+      .report-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .report-actions {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+  </style>
 </head>
+<body>
 
-<body bgcolor="purple">
+  <div class="page-header">
+    <h1>Reports Center</h1>
+    <p>Managing accreditation compliance for the <span>Bachelor of Science in Information Technology (BSIT)</span> Program.</p>
+    <div class="underline"></div>
+  </div>
+
+  <div class="card">
+    <h2>Reports Center (AACCUP/CHED Meetings)</h2>
+    <p><strong>Auto-generate</strong> and export formal progress reports for official compliance meetings and progress monitoring.</p>
+
+    <div class="report-list">
+      <div class="report-item">
+        <div class="report-info">
+          <h3>Progress Report</h3>
+          <p>Q3 2025 Accreditation Readiness Summary</p>
+        </div>
+        <div class="report-actions">
+          <span class="file-tag">PDF</span>
+          <button class="export-btn">Export Report</button>
+        </div>
+      </div>
+
+      <div class="report-item">
+        <div class="report-info">
+          <h3>AACCUP Format</h3>
+          <p>Self-Survey Form (Draft)</p>
+        </div>
+        <div class="report-actions">
+          <span class="file-tag">DOCX</span>
+          <button class="export-btn">Export Report</button>
+        </div>
+      </div>
+
+      <div class="report-item">
+        <div class="report-info">
+          <h3>CHED Status</h3>
+          <p>Compliance Status Report (2024)</p>
+        </div>
+        <div class="report-actions">
+          <span class="file-tag">XLSX</span>
+          <button class="export-btn">Export Report</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

@@ -1,12 +1,237 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internal Evaluations</title>
+  <style>
+    /* ===== General Reset ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
 
-    </style>
+    body {
+      background-color: #f6f6f9;
+      color: #333;
+      padding: 40px;
+    }
+
+    /* ===== Header Section ===== */
+    .page-header {
+      margin-bottom: 20px;
+    }
+
+    .page-header h1 {
+      font-size: 1.8rem;
+      color: #b71c1c;
+      font-weight: 700;
+    }
+
+    .page-header p {
+      font-size: 1rem;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    .page-header span {
+      font-weight: 600;
+      color: #b71c1c;
+    }
+
+    .underline {
+      width: 60px;
+      height: 3px;
+      background-color: #b71c1c;
+      margin-top: 10px;
+      border-radius: 2px;
+    }
+
+    /* ===== Card Container ===== */
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      padding: 25px 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      color: #1a1a1a;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card h2::before {
+      content: "📊";
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 8px 0 20px;
+    }
+
+    /* ===== Table Styles ===== */
+    .table-container {
+      overflow-x: auto;
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    thead {
+      background-color: #b71c1c;
+      color: #fff;
+    }
+
+    thead th {
+      text-align: left;
+      padding: 12px 15px;
+      font-size: 0.9rem;
+      letter-spacing: 0.3px;
+    }
+
+    tbody tr {
+      background-color: #fff;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    tbody tr:hover {
+      background-color: #fff7f7;
+      transform: scale(1.01);
+    }
+
+    tbody td {
+      padding: 12px 15px;
+      border-top: 1px solid #ddd;
+      font-size: 0.95rem;
+    }
+
+    /* ===== Status Badges ===== */
+    .status {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .met {
+      background-color: #e6f4ea;
+      color: #2e7d32;
+    }
+
+    .needs-improvement {
+      background-color: #fdecea;
+      color: #c62828;
+    }
+
+    .slightly-met {
+      background-color: #f3f8e8;
+      color: #827717;
+    }
+
+    /* ===== Action Icon ===== */
+    .action {
+      color: #1976d2;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+
+    .action:hover {
+      color: #0d47a1;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .page-header h1 {
+        font-size: 1.4rem;
+      }
+
+      .card h2 {
+        font-size: 1.1rem;
+      }
+
+      table {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
+<body>
 
-<body bgcolor="blue">
+  <div class="page-header">
+    <h1>Internal Evaluations</h1>
+    <p>Managing accreditation compliance for the <span>Bachelor of Science in Information Technology (BSIT)</span> Program.</p>
+    <div class="underline"></div>
+  </div>
+
+  <div class="card">
+    <h2>Internal Evaluation (Pre-Accreditation Scoring)</h2>
+    <p>Record internal scores and findings for each criterion. This data feeds into the <strong>Program Readiness Dashboard</strong>.</p>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>CRITERION</th>
+            <th>INTERNAL SCORE (1-5)</th>
+            <th>STATUS</th>
+            <th>FINDINGS / COMMENT</th>
+            <th>ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>I.1</td>
+            <td>5 / 5</td>
+            <td><span class="status met">Met</span></td>
+            <td>Excellent alignment with BOR mandates.</td>
+            <td><span class="action">✏️</span></td>
+          </tr>
+          <tr>
+            <td>II.4</td>
+            <td>3 / 5</td>
+            <td><span class="status needs-improvement">Needs Improvement</span></td>
+            <td>Faculty development plan needs budget allocation.</td>
+            <td><span class="action">✏️</span></td>
+          </tr>
+          <tr>
+            <td>V.4</td>
+            <td>4 / 5</td>
+            <td><span class="status slightly-met">Slightly Met</span></td>
+            <td>Org chart submitted but needs latest design version.</td>
+            <td><span class="action">✏️</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
 </body>
 </html>
