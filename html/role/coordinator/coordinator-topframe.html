@@ -11,10 +11,31 @@
         font-weight: bold;
         display: flex;
         align-items: center;
+        justify-content: space-between; /* keeps icons to the right */
         padding: 15px 30px;
       }
+
       .logo-link {
         text-decoration: none;
+      }
+
+      .right-icons {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .right-icons img {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .right-icons img:hover {
+        transform: scale(1.1);
       }
     </style>
     <link href="/css/header.css" rel="stylesheet" />
@@ -27,5 +48,11 @@
         <span class="logo-text">AccrediTrack</span>
       </div>
     </a>
+
+    <!-- added right corner icons -->
+    <div class="right-icons">
+      <img src= "/asset/icons/notification.png" alt="Notification Icon" />
+      <img src="/asset/icons/profile.png" alt="Profile Icon" />
+    </div>
   </body>
 </html>
