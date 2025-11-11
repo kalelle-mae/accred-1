@@ -11,10 +11,25 @@
         font-weight: bold;
         display: flex;
         align-items: center;
+        justify-content: space-between; /* added to push icons to the right */
         padding: 15px 30px;
       }
+
       .logo-link {
         text-decoration: none;
+      }
+
+      .right-icons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .icon-placeholder {
+        width: 35px;
+        height: 35px;
+        background-color: #a33b33;
+        border-radius: 50%;
       }
     </style>
     <link href="/css/header.css" rel="stylesheet" />
@@ -27,5 +42,11 @@
         <span class="logo-text">AccrediTrack</span>
       </div>
     </a>
+
+    <!-- added right corner placeholders -->
+    <div class="right-icons">
+      <div class="icon-placeholder"></div>
+      <div class="icon-placeholder"></div>
+    </div>
   </body>
 </html>
