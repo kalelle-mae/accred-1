@@ -80,7 +80,7 @@ header a {
   display: inline-block;
   padding: 0.45rem 0.9rem;
   background: #ffffff;
-  color: #ff0404;
+  color: #760e07;
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
@@ -88,6 +88,6 @@ header a {
 }
 
 .login-btn:hover {
-  background: #df291c;
+  background: #760e07;
   color: #ffffff;
 }
