@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Settings & Integrations</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+    }
+
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+
+    h1::before {
+      content: "";
+      font-size: 22px;
+      margin-right: 10px;
+    }
+
+
+    p.subtitle {
+      color: #444;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 20px;
+      border: 1px solid #f3f4f6;
+      transition: all 0.25s ease;
+    }
+
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+
+    .section-title {
+      font-weight: bold;
+      font-size: 17px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+
+    .section-title.red::before {
+      content: "";
+      margin-right: 8px;
+      color: #b91c1c;
+    }
+
+
+    .section-title.orange::before {
+      content: "";
+      margin-right: 8px;
+      color: #d97706;
+    }
+
+
+    .section-title.blue::before {
+      content: "";
+      margin-right: 8px;
+      color: #2563eb;
+    }
+
+
+    .label {
+      font-weight: bold;
+      color: #333;
+      font-size: 14px;
+    }
+
+
+    .value {
+      color: #555;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+
+    .green-text {
+      color: #15803d;
+      font-weight: bold;
+    }
+
+
+    .red-text {
+      color: #b91c1c;
+      font-weight: bold;
+    }
+
+
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: monospace;
+      background-color: #f9fafb;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+
+    button {
+      border: none;
+      background-color: #b91c1c;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+
+    button:hover {
+      background-color: #9a1313;
+      transform: scale(1.03);
+    }
+
+
+    .full-width-btn {
+      width: 100%;
+      background-color: #e5e7eb;
+      color: #333;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+
+    .full-width-btn:hover {
+      background-color: #d1d5db;
+      transform: scale(1.02);
+    }
+
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>System Settings & Integrations</h1>
+    <p class="subtitle">
+      Manage critical system configurations, security, and external service integrations.
+    </p>
+
+
+    <div class="grid">
+      <!-- Security & Deployment -->
+      <div class="card">
+        <div class="section-title red">Security & Deployment</div>
+        <div class="label">Authentication Protocol</div>
+        <div class="value green-text">OAuth 2.0 (JWT)</div>
+
+
+        <div class="label">Encryption Standard</div>
+        <div class="value">AES-256</div>
+
+
+        <div class="label">System ID (for Firestore path)</div>
+        <input type="text" value="c_1adecf5c9648aea56_AdminApp.jsx-162" readonly />
+
+
+        <button>Update Security Rules</button>
+      </div>
+
+
+      <!-- Storage & Backup -->
+      <div class="card">
+        <div class="section-title orange">Storage & Backup</div>
+        <div class="label">Storage Quota Used</div>
+        <div class="value red-text">21.8 / 50 GB</div>
+
+
+        <div class="label">Backup Protocol</div>
+        <div class="value">Scheduled Daily</div>
+
+
+        <button>Run Manual Backup</button>
+      </div>
+    </div>
+
+
+    <!-- External Integrations -->
+    <div class="card">
+      <div class="section-title blue">External Integrations</div>
+      <div class="label">Email Notification Service</div>
+      <div class="value green-text">Active (SMTP Relay)</div>
+
+
+      <div class="label">Cloud Storage Provider</div>
+      <div class="value">Firebase Storage (Mock)</div>
+
+
+      <div class="full-width-btn">Configure FLS Integration</div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+

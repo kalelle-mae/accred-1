@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports Center</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+    }
+
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: 26px;
+      color: #b91c1c;
+    }
+
+
+    p.subtitle {
+      color: #444;
+      margin-bottom: 25px;
+      font-size: 15px;
+    }
+
+
+    .report-card {
+      border: 1px solid #f2b1b1;
+      border-radius: 8px;
+      background-color: #fff9f9;
+      padding: 18px 20px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+
+    .report-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .report-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    .report-title {
+      font-weight: bold;
+      color: #333;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+
+    .report-desc {
+      color: #555;
+      font-size: 14px;
+    }
+
+
+    .generate-btn {
+      background-color: #b91c1c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.25s, transform 0.2s;
+    }
+
+
+    .generate-btn:hover {
+      background-color: #9b1111;
+      transform: scale(1.05);
+    }
+
+
+    @media (max-width: 700px) {
+      .report-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+
+      .generate-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Reports Center (System & Campus Analytics)</h1>
+    <p class="subtitle">
+      Generate high-level reports on resource utilization and overall campus-wide accreditation readiness.
+    </p>
+
+
+    <div class="report-card">
+      <div class="report-info">
+        <span class="report-title">Campus-wide Progress Report</span>
+        <span class="report-desc">Consolidated readiness scores across all active programs.</span>
+      </div>
+      <button class="generate-btn">Generate & Export</button>
+    </div>
+
+
+    <div class="report-card">
+      <div class="report-info">
+        <span class="report-title">User Activity Report (Last 90 Days)</span>
+        <span class="report-desc">Summary of user logins, uploads, and review actions.</span>
+      </div>
+      <button class="generate-btn">Generate & Export</button>
+    </div>
+
+
+    <div class="report-card">
+      <div class="report-info">
+        <span class="report-title">Storage Utilization Breakdown</span>
+        <span class="report-desc">Detailed report on storage consumption per program and document type.</span>
+      </div>
+      <button class="generate-btn">Generate & Export</button>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+

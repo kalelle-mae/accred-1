@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit Trail (Security & Activity Logs)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+    }
+
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+    h1 {
+      font-size: 22px;
+      color: #b91c1c;
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+
+    h1::before {
+      content: "🩺";
+      font-size: 22px;
+      margin-right: 10px;
+    }
+
+
+    p.subtitle {
+      color: #444;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+
+    .search-box {
+      flex: 1;
+      min-width: 220px;
+      position: relative;
+    }
+
+
+    .search-box input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border-color 0.2s;
+    }
+
+
+    .search-box input:focus {
+      border-color: #b91c1c;
+      outline: none;
+    }
+
+
+    .export-btn {
+      display: flex;
+      align-items: center;
+      background-color: #e5e7eb;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 14px;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+
+    .export-btn:hover {
+      background-color: #d1d5db;
+      transform: scale(1.03);
+    }
+
+
+    .export-btn::before {
+      content: "⬇️";
+      font-size: 16px;
+      margin-right: 6px;
+    }
+
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+
+    thead {
+      background-color: #f9fafb;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+
+    th, td {
+      text-align: left;
+      padding: 12px 10px;
+    }
+
+
+    th {
+      color: #444;
+      font-weight: bold;
+    }
+
+
+    tbody tr {
+      border-bottom: 1px solid #eee;
+      transition: background-color 0.2s;
+    }
+
+
+    tbody tr:hover {
+      background-color: #fef2f2;
+    }
+
+
+    tbody tr:nth-child(1) {
+      background-color: #fffbe6;
+    }
+
+
+    .user-admin {
+      color: #b91c1c;
+      font-weight: bold;
+    }
+
+
+    .user-coord {
+      color: #1e40af;
+      font-weight: bold;
+    }
+
+
+    .user-system {
+      color: #7f1d1d;
+      font-weight: bold;
+    }
+
+
+    @media (max-width: 700px) {
+      .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+
+      .export-btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+
+      thead {
+        display: none;
+      }
+
+
+      tbody tr {
+        margin-bottom: 15px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        padding: 10px;
+      }
+
+
+      td {
+        padding: 6px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #444;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Audit Trail (Security & Activity Logs)</h1>
+    <p class="subtitle">
+      Track all critical system actions, user logins, and configuration changes for security and accountability.
+    </p>
+
+
+    <div class="toolbar">
+      <div class="search-box">
+        <input type="text" placeholder="🔍 Filter by user or action..." />
+      </div>
+      <button class="export-btn">Export Logs (CSV)</button>
+    </div>
+
+
+    <table>
+      <thead>
+        <tr>
+          <th>TIMESTAMP</th>
+          <th>USER</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Timestamp">2025-11-12 <strong>10:05 AM</strong></td>
+          <td data-label="User" class="user-admin">Admin Dela Cruz</td>
+          <td data-label="Action">User role updated: Prof. Garcia set to Faculty.</td>
+        </tr>
+        <tr>
+          <td data-label="Timestamp">2025-11-12 <strong>09:45 AM</strong></td>
+          <td data-label="User" class="user-admin">Admin Dela Cruz</td>
+          <td data-label="Action">Structure Configured: Added Parameter V.4.3.</td>
+        </tr>
+        <tr>
+          <td data-label="Timestamp">2025-11-11 <strong>03:20 PM</strong></td>
+          <td data-label="User" class="user-coord">Coord. Santos</td>
+          <td data-label="Action">Login successful.</td>
+        </tr>
+        <tr>
+          <td data-label="Timestamp">2025-11-11 <strong>09:00 AM</strong></td>
+          <td data-label="User" class="user-system">System</td>
+          <td data-label="Action">Scheduled data backup completed.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+
+
+
+
+
