@@ -1,62 +1,64 @@
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        margin: 0;
+        background-color: #760e07;
+        color: white;
+        font-family: Verdana;
+        font-size: 22px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* keeps icons to the right */
+        padding: 15px 30px;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <style>
-    body {
-      margin: 0;
-      background-color: #760e07;
-      color: white;
-      font-family: Verdana;
-      font-size: 22px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      /* keeps icons to the right */
-      padding: 15px 30px;
-    }
+      .logo-link {
+        text-decoration: none;
+      }
 
-    .logo-link {
-      text-decoration: none;
-    }
+      .right-icons {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
 
-    .right-icons {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-    }
+      .right-icons img {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
 
-    .right-icons img {
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      object-fit: cover;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
+      .right-icons img:hover {
+        transform: scale(1.1);
+      }
+    </style>
+    <link href="/css/header.css" rel="stylesheet" />
+  </head>
 
-    .right-icons img:hover {
-      transform: scale(1.1);
-    }
-  </style>
-  <link href="/css/header.css" rel="stylesheet">
-</head>
+  <body>
+    <a
+      class="logo-link"
+      href="/html/role-landing-page/accreditor/accreditor-index.html"
+      target="_top"
+    >
+      <div class="logo-container">
+        <div class="logo-icon"></div>
+        <span class="logo-text">AccrediTrack</span>
+      </div>
+    </a>
 
-<body>
-  <a class="logo-link" href="/html/role/accreditor.html" target="_parent">
-    <div class="logo-container">
-      <div class="logo-icon"></div>
-      <span class="logo-text">AccrediTrack</span>
+    <!-- added right corner icons -->
+    <div class="right-icons">
+      <img src="/asset/icons/notification.png" alt="Notification Icon" />
+      <img src="/asset/icons/user-logo.png" alt="Profile Icon" />
+      <a href="/index.html" target="_parent" class="login-btn">Logout</a>
     </div>
-  </a>
-
-  <!-- added right corner icons -->
-  <div class="right-icons">
-    <img src="/asset/icons/notification.png" alt="Notification Icon">
-    <img src="/asset/icons/user-logo.png" alt="Profile Icon">
-    <a href="/index.html" target="_parent" class="login-btn">Logout</a>
-  </div>
-</body>
-
+  </body>
 </html>

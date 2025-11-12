@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accreditor</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #ffffff;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      /* MAIN */
+      .main {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* neutral, non-red overlay */
+        background: linear-gradient(
+            135deg,
+            rgba(158, 103, 103, 0.274),
+            rgba(0, 0, 0, 0.55)
+          ),
+          url("/asset/bg/pup_pillar.png");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 40px 0;
+        position: relative;
+      }
+
+      .main > * {
+        position: relative;
+        z-index: 2;
+      }
+
+      .main h1 {
+        font-size: 3.2rem;
+        margin-bottom: 18px;
+        color: #ffffff;
+        /* remove red glow, use subtle neutral shadow */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35),
+          0 0 18px rgba(255, 255, 255, 0.02);
+        font-weight: 800;
+        letter-spacing: 1px;
+        position: relative;
+      }
+
+      .welcome-card {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        margin-top: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .message {
+        max-width: 700px;
+        color: rgba(255, 255, 255, 0.95);
+        background: rgba(0, 0, 0, 0.25);
+        padding: 18px;
+        border-radius: 12px;
+        text-align: left;
+        line-height: 1.6;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+      }
+
+      .stats {
+        min-width: 260px;
+        background: #fff;
+        color: #760e07;
+        padding: 18px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      }
+
+      .stats h3 {
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+      }
+
+      .stats .count {
+        font-size: 2.2rem;
+        font-weight: 800;
+        margin-bottom: 6px;
+      }
+
+      .btn-actions {
+        margin-top: 14px;
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+      }
+
+      .btn {
+        padding: 10px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        background: #fff;
+        color: #760e07;
+        transition: background 0.18s ease, color 0.18s ease,
+          transform 0.12s ease, box-shadow 0.18s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .btn:hover {
+        background: #760e07;
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(118, 14, 7, 0.18);
+      }
+
+      .btn.secondary {
+        background: transparent;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        transition: background 0.18s ease, color 0.18s ease,
+          transform 0.12s ease, box-shadow 0.18s ease;
+      }
+
+      .btn.secondary:hover {
+        background: rgba(255, 255, 255, 0.92);
+        color: #760e07;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      /* Footer Section */
+      .footer {
+        width: 100%;
+        height: 40vh;
+        background: #760e07;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 18px;
+      }
+
+      .logo-container img {
+        height: 48px;
+        width: auto;
+        filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.25));
+      }
+
+      /* director message styles (white background, dark text) */
+      .director-section {
+        max-width: 980px;
+        margin: 28px auto;
+        padding: 22px;
+        background: #ffffff;
+        color: #222; /* dark text for white background */
+        border-radius: 12px;
+        box-shadow: 0 12px 30px rgba(2, 6, 23, 0.04);
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        border-left: 5px solid #760e07; /* red accent */
+      }
+      .director-portrait {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+      .director-section img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 8px 18px rgba(7, 18, 34, 0.06);
+      }
+      .portrait-caption {
+        font-weight: 700;
+        color: #760e07;
+        text-align: center;
+        font-size: 0.95rem;
+      }
+      .director-section h2 {
+        color: #2b2b2b;
+        margin-bottom: 6px;
+        font-size: 1.1rem;
+        letter-spacing: 0.4px;
+      }
+      .director-section .text {
+        line-height: 1.65;
+        color: #333;
+      }
+      .director-quote {
+        font-style: italic;
+        font-size: 0.98rem;
+        color: #1f2937;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- main replaced with accreditor-specific welcome content -->
+    <section class="main">
+      <div class="logo-container">
+        <img src="/asset/logo/pup.png" alt="PUP Logo" />
+        <img src="/asset/logo/accreditrack.png" alt="AccrediTrack Logo" />
+      </div>
+
+      <!-- changed heading for accreditor -->
+      <h1 id="accreditorGreeting">Welcome to PUP Taguig Branch - AACCUPP!</h1>
+
+      <div class="welcome-card">
+        <div class="message" aria-live="polite">
+          <!-- friendlier welcoming message -->
+
+          <p id="accrMessage">
+            In this system you can open your assigned items, review the
+            submitted evidence, and record your evaluation for the accreditation
+            survey. Take your time to examine materials and share constructive,
+            clear findings — your observations help improve programs and guide
+            the accreditation process. Click "Evaluate" when you're ready to
+            begin.
+          </p>
+
+          <div class="btn-actions">
+            <!-- primary action changed to Evaluate -->
+            <a href="/html/role/accreditor.html" class="btn" target="_top"
+              >Evaluate</a
+            >
+            <a
+              href="/html/role-landing-page/accreditor/accreditor-learn-more.html"
+              class="btn secondary"
+              >Learn More</a
+            >
+          </div>
+        </div>
+
+        <!-- quick analytics summary for accreditor -->
+        <div class="stats" role="status" aria-live="polite">
+          <h3>Quick Overview</h3>
+          <div class="count" id="programsCount">5</div>
+          <div class="muted">programs under survey</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MESSAGE FROM THE DIRECTOR (below main) -->
+    <section class="director-section" aria-labelledby="dirTitle">
+      <div class="director-portrait">
+        <img src="/asset/accreditor/director.png" alt="Dr. Marissa B. Ferrer" />
+        <div class="portrait-caption">
+          Dr. Marissa B. Ferrer<br /><small>PUP Taguig Branch Director</small>
+        </div>
+      </div>
+      <div>
+        <h2 id="dirTitle">MESSAGE FROM THE DIRECTOR</h2>
+        <div class="text">
+          <blockquote class="director-quote">
+            Quality assurance through the process of accreditation knows no
+            boundaries. It is a never-ending process of improvement.
+            Accreditation is a process by which an institution evaluates its
+            educational activities and seeks an independent judgment to confirm
+            the quality and continuous improvement of its programs.
+          </blockquote>
+          <br />
+          <p>
+            Today, to ensure that we provide our students and stakeholders the
+            best quality of service and education, PUP Taguig voluntarily
+            submits five (5) programs — BSBA (Bachelor of Science in Business
+            Administration: Marketing, Human Resources), BS Office
+            Administration (Bachelor of Science in Office Administration), BS
+            Accountancy (Bachelor of Science in Accountancy), BSIT (Bachelor of
+            Science in Information Technology), and BSED (Bachelor of Secondary
+            Education) — to the accreditation process in 2025. We remain
+            committed to continuous improvement, transparency, and academic
+            excellence as we work together to strengthen our programs.
+          </p>
+          <br />
+          <p>
+            We are honored to be visited by seasoned accreditors and educational
+            leaders who will help ensure the best educational experience for
+            future generations. On behalf of the University officials, I extend
+            my heartfelt gratitude for your expertise and time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <p>&copy; 2025 AccrediTrack. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
